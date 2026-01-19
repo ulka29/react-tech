@@ -80,3 +80,29 @@ function applyCoupon(amount, couponCode){
     return ans;
 }
 console.log(applyCoupon(2000,"SAVE20"));
+
+
+
+// closure
+for (let i = 0; i < 3; i++) {
+    
+    setTimeout(() => console.log(i), 1000);
+    
+}
+function outer(){
+    var k=0;
+    return function inner(){
+        let p=0;
+        console.log(k,p);
+        k++;
+        p++;
+    }
+}
+
+let abc=outer();
+let xyz=outer();
+abc()
+abc()
+
+xyz()
+xyz()
