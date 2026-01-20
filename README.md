@@ -1,2 +1,5 @@
 # React-tech
-session 2 assignments are added
+Session 2 assignment
+Session 2 assignment 
+
+Location:JS assignment/js
