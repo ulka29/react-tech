@@ -47,6 +47,8 @@ function Dog(name, breed) {
 }
 
 // Intent: Dog should inherit from Animal
+//we use assgn for prototype
+
 Dog.prototype = Animal.prototype; 
 
 Dog.prototype.bark = function() {

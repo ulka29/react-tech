@@ -25,12 +25,13 @@ numberCkeck(a);
 // Assignmet-2
 console.log("Assignmet-2: ");
 for(let i=1;i<=20;i++){
-    if(i%2==0){
-        console.log(i +" even");
-    }
-    else{
-        console.log(i +" odd");
-    }
+    (i%2==0)?console.log(i +" even"):console.log(i +" odd");
+    // if(i%2==0){
+    //     console.log(i +" even");
+    // }
+    // else{
+    //     console.log(i +" odd");
+    // }
 
 }
 
