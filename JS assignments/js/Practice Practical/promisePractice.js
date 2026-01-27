@@ -5,7 +5,7 @@ const promiseOne = new Promise((resolve, reject) => {
     console.log("Executor runs immediately");
 });
 console.log("end");
-console.log("=====================================================================================");
+console.log("+=====================================================================================");
 
 //detailed promise with whole flow
 
