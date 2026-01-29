@@ -56,13 +56,8 @@ console.log(userMethods.__proto__)             //[Object: null prototype] {}
 
 
 
-// A property is a key-value pair attached to an object.
-// Each property has more than just a value — it has hidden metadata called descriptors
-const obj = { x: 10 }; //x = property name / key and 10=value
 
-// Default for normal object properties: writable: true, enumerable: true, configurable: true
-// 🔹 Modify descriptors
-Object.defineProperty(obj, 'x', {
-  writable: false,
-  enumerable: false
-});
+
+
+
+

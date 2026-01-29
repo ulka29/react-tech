@@ -60,7 +60,7 @@ const person = {
 
 
 //The this keyword
-// Object method call → this = the object
+// Object method call -> this = the object
 const obj = {
   name: "Alice",
   greet() { console.log(this.name); }
@@ -80,45 +80,9 @@ function Person2(name) {
 const p = new Person2("Charlie");
 console.log(p.name); // Charlie
 
-// Arrow functions → do not have their own this, take from lexical scope
+// Arrow functions -> do not have their own this, take from lexical scope
 const obj1 = {
   name: "Alice",
   greet: () => { console.log(this.name); }
 };
 obj1.greet(); // undefined (because arrow takes 'this' from outside, usually window/global)
-
-
-
-
-
-// 1. Constructor Function (classic JS way)
-// Before ES6 classes, this was the standard.
-function Person3(name, age) {
-  this.name = name;
-  this.age = age;
-}
-const p1 = new Person3("John", 25);
-const p2 = new Person3("Alice", 30);
-
-// What does new actually do internally?
-// 1️. Create empty object :{}
-// 2️. Bind this to that object: this = {}
-// 3️. Add properties: this.name = "John"  this.age = 25
-// Now object becomes: { name: "John", age: 25 }
-// 4️. Return object automatically: return this
-
-// 2. Modern way — Class Constructor (ES6)
-class Person4 {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-}
-const p3 = new Person4("John", 25);
-
-// Important
-// This: class Person {} is just syntactic sugar over:
-// function Person() {} Under the hood → same thing.
-
-// greet(); // normal call
-// new Person(); //constructor function
