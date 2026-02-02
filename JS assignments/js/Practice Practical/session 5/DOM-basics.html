@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .dark{
+        background-color: black;
+        color: white;
+    }
+    div{
+        background-color: aqua;
+    }
+    .para_orignal{
+        display: inline;
+    }
+    .para{
+        display: none;
+    }
+</style>
+<body>
+    <h1 id="title">Hello</h1>
+    <button id="btn">Change</button>
+    <button id="toggle">toggle theme</button>
+
+    <div>
+        <p id="count">0</p>
+        <button id="ctr_increase">increase count</button>
+        <button id="ctr_decrease">decrease count</button>
+    </div>
+
+    <div>
+        <p class="para_orignal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim reiciendis itaque at in odit accusamus nesciunt excepturi cum iure doloremque, id nostrum natus praesentium temporibus omnis. Nulla cum vitae dolor.</p>
+        <p class="para_orignal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim reiciendis itaque at in odit accusamus nesciunt excepturi cum iure doloremque, id nostrum natus praesentium temporibus omnis. Nulla cum vitae dolor.</p>
+        <p class="para_orignal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim reiciendis itaque at in odit accusamus nesciunt excepturi cum iure doloremque, id nostrum natus praesentium temporibus omnis. Nulla cum vitae dolor.</p>
+        <p class="para_orignal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim reiciendis itaque at in odit accusamus nesciunt excepturi cum iure doloremque, id nostrum natus praesentium temporibus omnis. Nulla cum vitae dolor.</p>
+        <br>
+        <button id="para_toggle">toggle pragraph</button>
+        
+    </div>
+
+    <script>
+        // Task 1 — Change heading on button click
+        const title= document.getElementById("title")
+        const btn= document.getElementById("btn")
+        btn.addEventListener("click",()=>{
+            title.textContent="Welcome";
+        })
+
+        // Task 2 — Dark/Light Theme Toggle
+        //classList is a property of DOM elements that lets you add, remove, toggle, and check CSS classes easily.
+        // It returns a: DOMTokenList (array-like collection of classes)
+        //Toggles: adds and remove given class one event
+        const toggle_btn=document.querySelector("#toggle");
+        toggle_btn.addEventListener("click",()=>{
+            document.body.classList.toggle("dark")
+        })
+
+        // Task 3: Counter app (+ - buttons)
+        const ctr_increase=document.getElementById("ctr_increase");
+        const ctr_decrease=document.getElementById("ctr_decrease");
+        const count=document.getElementById("count");
+        let counter=0;
+        ctr_increase.addEventListener("click",()=>{
+            counter=counter+1;
+            count.textContent = String(counter);
+        })
+        ctr_decrease.addEventListener("click",()=>{
+            counter=counter-1;
+            count.textContent = String(counter);
+        })
+
+
+
+        //Togle Paragraphs
+        const para_toggle=document.querySelector("#para_toggle");
+        const para=document.querySelectorAll(".para_orignal");
+        para_toggle.addEventListener("click",()=>{
+            para
+            .forEach(p=>p.classList.toggle("para"));
+        })
+    </script>
+</body>
+</html>

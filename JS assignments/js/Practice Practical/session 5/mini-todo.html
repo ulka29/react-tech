@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <ul id="todo"></ul>
+    <input type="text" id="item_name"/>
+    <button id="add"></button>
+    <script>
+        const todo=document.querySelector("#todo")
+        const add=document.querySelector("#add")
+        const input=document.querySelector("#item_name");
+
+        console.log(input)
+        let ctn=1;
+        add.addEventListener("click",()=>{
+            const li = document.createElement("li");
+            li.textContent=input.value +ctn++;
+            todo.appendChild(li)
+        })
+    </script>
+</body>
+</html>
