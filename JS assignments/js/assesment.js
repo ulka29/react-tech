@@ -66,3 +66,29 @@ function chunckArr(arr,size){
     return ans;
 }
 console.log(chunckArr([1,2,3,4,5,6,7],2))
+
+
+// JS: Transform Array of Objects into Tag-Based Mapping
+const input = [
+{ id: 3, tags: ["a","b"]},
+{ id: 1, tags: ["b","c"]},
+{ id: 2, tags: ["a","c","d"] },
+{ id: 2, tags: ["d","e"] }, // duplicate id
+];
+
+const ans = input.reduce((acc,curr,i)=>{
+    curr.tags.forEach((x)=>{
+        if(!acc[x]){
+            acc[x]=new Set();
+        }
+        acc[x].add(curr.id)
+    })
+    return acc;
+
+},{})
+
+for(let i in ans){
+    ans[i]=[...ans[i]].sort()
+}
+
+console.log(ans)
