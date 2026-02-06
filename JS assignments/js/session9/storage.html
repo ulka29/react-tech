@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="name" id="name">
+    <button class="button" id="save">Save</button>
+    <button class="button" id="load">load</button>
+
+    <script>
+        const save= document.querySelector("#save")
+        const load=document.querySelector("#load")
+        const input = document.querySelector("#name")
+
+        save.addEventListener("click",()=>{
+            const value = input.value;
+            localStorage.setItem('name', value);
+            sessionStorage.setItem('name', value)
+        })
+        load.addEventListener("click",()=>{
+            const value1 = localStorage.getItem('name')
+            const value2 = sessionStorage.getItem('name')
+            alert(value1)
+            alert(value2)
+        })
+
+        // what happens when page refreashed? => Both storage stays
+        // what happens when tab closed? =>  local storage stays and session storage gets removed
+    </script>
+</body>
+</html>
+
