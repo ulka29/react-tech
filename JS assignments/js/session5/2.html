@@ -1,0 +1,45 @@
+<!-- 2) Create three <div> elements with the class box.
+Select all boxes using querySelectorAll and change the background color of each box to lightblue using forEach. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        color: black;
+        background-color: bisque;
+        width: 150px;
+        height: 50px;
+        border-radius: 8px;
+    }
+    .box{
+        color: aquamarine;
+        background-color: blueviolet;
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+        padding: 10px;
+    }
+</style>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <button id="change-background">change-background</button>
+
+   <script>
+    const box = document.querySelectorAll(".box")
+    const button = document.querySelector("#change-background")
+    
+    button.addEventListener("click",()=>{
+        box.forEach((e)=>{
+            e.style.background = "red";
+        })
+    }) 
+
+   </script> 
+</body>
+</html>
