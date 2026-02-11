@@ -1,6 +1,6 @@
 // Assignment 2: any vs unknown
 // 1. Create a function that accepts any and performs operations without checks
-function addAny(a:any,b:any){
+function addAny(a:any,b:any):any{
     return a+b;
 }
 
@@ -9,7 +9,7 @@ function addAny(a:any,b:any){
 
 
 // 2. Create the same function using unknown and add proper type guards
-function addUnknown(a:unknown,b:unknown){
+function addUnknown(a:unknown,b:unknown):number | void{
     if(typeof a ==="number" && typeof b==="number" ){
         return a+b
     }

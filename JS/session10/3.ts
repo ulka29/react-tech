@@ -54,7 +54,7 @@ type Guest = {
 
 type User = Admin | Customer| Guest;
 
-function dashboard (user:User){
+function dashboard (user:User):void{
     if(user.role=='admin'){
         console.log("Permissions are",user.permissions)
     }
@@ -127,7 +127,7 @@ type Pet = Dog | Cat;
 
     // 7. Write a function that accepts the union and narrows the type safely
 
-function printInfo(person: Person) {
+function printInfo(person: Person):void {
   if (person.role === "student") {
     console.log("Marks:", person.marks);
   } else {
@@ -149,7 +149,7 @@ let person2 : Person = {
 printInfo(person1);
 printInfo(person2);
 
-function petInfo(pet: Pet) {
+function petInfo(pet: Pet):void {
   if (pet.type === "dog") {
     console.log("Breed:", pet.breed);
   } else {

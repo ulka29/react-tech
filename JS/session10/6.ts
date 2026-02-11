@@ -20,7 +20,7 @@ interface Customer extends baseUser{
 
 //3. Write a function that accepts BaseUser
 //4. Pass both Admin and Customer objects to the function
-function printUser(user:baseUser){
+function printUser(user:baseUser):void{
     console.log(user.name, user.id)
 }
 let admin1 : Admin={
@@ -47,7 +47,7 @@ interface ApiResponse<T> {
   data: T;
   message?: string;
 }
-function handleResponse<T>(response: ApiResponse<T>) {
+function handleResponse<T>(response: ApiResponse<T>):void {
   if (response.success) {
     console.log(response.data);
   } else {

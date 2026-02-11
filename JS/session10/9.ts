@@ -50,13 +50,13 @@ class User {
     this.role = role;
   }
 
-  public greet() {
+  public greet():string {
     return `Hello ${this.name}`;
   }
 }
 
 class Admin extends User {
-  showRole() {
+  showRole():void {
     console.log(this.role); // allowed 
   }
 }

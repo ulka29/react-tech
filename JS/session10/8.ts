@@ -7,7 +7,7 @@ function user(id:number,name:string,email?:string): boolean{
 }
 
 // 3. Create a small utility function that would exist in a real project
-function formatName(fisrtName: String, salutation: string = "Mr / Mrs"): string {
+function formatName(fisrtName: string, salutation: string = "Mr / Mrs"): string {
   return salutation+" "+fisrtName;
 }
 
@@ -18,7 +18,7 @@ console.log(formatName("Ulka", "Miss"));  // "Miss Ulka"
 
 // 4. Write a function with one required and one optional parameter
 // 5. Call it with and without the optional argument
-function fullName(fisrtName:string,lastname?:string){
+function fullName(fisrtName:string,lastname?:string):void{
     console.log(fisrtName," ",lastname);
 }
 fullName("Ulka")

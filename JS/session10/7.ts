@@ -10,7 +10,7 @@ enum paymentStatus{
     Success="SUCCESS",
     Failed="FAILED"
 }
-function paymentUpdate(status:paymentStatus){
+function paymentUpdate(status:paymentStatus):void{
     console.log("status: ",status);
 }
 paymentUpdate(paymentStatus.Initiate);

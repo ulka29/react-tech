@@ -13,6 +13,8 @@ a="xyza"
 //as JS runs in the end but const cant be reassigned so it gives error
 
 // step:3 Write a function without a return type and inspect what TypeScript infers
+
+// here we have dont have to provide return type but without it what TS will do infer it.
 function add(a:number, b:number){
     return a+b;
 }
