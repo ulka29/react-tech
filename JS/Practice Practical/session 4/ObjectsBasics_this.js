@@ -29,9 +29,9 @@ console.log(person["job"]); // Engineer
 
 
 // let key = "age";
-// person.key   // ❌ wrong
-// person.user-name // ❌ minus operator
-// person.first name  // ❌ syntax error
+// person.key   // wrong
+// person.user-name // minus operator
+// person.first name  // syntax error
 
 
 
