@@ -62,7 +62,7 @@ Promise.allSettled([getProfile(), getPosts(), getNotifications()])
 
 // Using Promise.race (first finished)
 // Resolves/rejects as soon as first promise finishes
-// Total time = fastest timer (1200ms → notifications in this example)
+// Total time = fastest timer (1200ms getProfile in this example)
 
 Promise.race([getProfile(), getPosts(), getNotifications()])
   .then(function(first) {

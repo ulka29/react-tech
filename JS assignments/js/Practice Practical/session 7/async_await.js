@@ -26,7 +26,7 @@ function loadComments() {
 }
 
 //Sequntiall
-async function dashboard() {
+async function dashboardSequential() {
   let user = await loadUser()
   let posts = await loadPosts()
   let comments = await loadComments()
@@ -38,7 +38,7 @@ async function dashboard() {
 }
 
 //Parrelell
-async function dashboard1() {
+async function dashboardParrellel() {
   let user = await loadUser();
   
   // posts and comments load in parallel
@@ -54,10 +54,10 @@ async function dashboard1() {
 
 async function runDashboards() {
   console.log("Starting sequential dashboard...");
-  await dashboard();   // wait for sequential to finish
+  await dashboardSequential();   // wait for sequential to finish
 
   console.log("\nStarting parallel dashboard...");
-  await dashboard1();  // run parallel version after
+  await dashboardParrellel();  // run parallel version after
 }
 
 runDashboards();
