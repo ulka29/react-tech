@@ -10,7 +10,7 @@ type User = {
 type ReadOnlyUser={
     readonly [K in keyof User] : User[K]
 }
-let readOnlyUser: ReadOnlyUser = {
+const readOnlyUser: ReadOnlyUser = {
     id:1,
     name:"Ulka",
     isActive:true,

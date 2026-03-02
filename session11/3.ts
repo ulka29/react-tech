@@ -14,7 +14,7 @@ type User = {
     id:number,
     name:string,
 }
-let user :User= {
+const user :User= {
     id:2,
     name:"Ulka"
 }

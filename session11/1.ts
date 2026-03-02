@@ -17,11 +17,11 @@ console.log(wrapInArray("Ulka"))
 // total: number
 
 interface User {
-id: number
-name: string
-email: string
-role: "ADMIN" | "CUSTOMER"
-isActive: boolean
+    id: number
+    name: string
+    email: string
+    role: "ADMIN" | "CUSTOMER"
+    isActive: boolean
 }
 
 interface PaginatedResponse<T>{
@@ -30,9 +30,13 @@ interface PaginatedResponse<T>{
 }
 
 const responses: PaginatedResponse<User>= {
-    items:[
-        {id:1,name:"ulka",email:"ahsd",role:"ADMIN",isActive:true}
-    ],
+    items:[{
+        id:1,
+        name:"ulka",
+        email:"ahsd",
+        role:"ADMIN",
+        isActive:true
+    }],
     total:1
 }
 
